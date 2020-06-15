@@ -8,9 +8,17 @@
       "android"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SmallTsai/cordova-plugin-notification-listener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SmallTsai/cordova-plugin-notification-listener/issues"
+  },  
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "notification"
   ],
   "author": "lou",
   "license": "MIT"
