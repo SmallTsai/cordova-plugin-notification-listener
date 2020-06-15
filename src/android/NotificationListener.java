@@ -41,7 +41,6 @@ public class NotificationListener extends CordovaPlugin {
 
     private static final String ACTION_HAS_PERMISSION = "hasPermission";
     private static final String ACTION_REQUEST_PERMISSION = "requestPermission";
-    private static final String ACTION_OPEN_SETTINGS = "openSettings";
     private static final String ACTION_IS_RUNNING = "isRunning";
     private static final String ACTION_TOGGLE = "toggle";
     private static final String ACTION_ADD_LISTENER = "addListener";
@@ -57,9 +56,6 @@ public class NotificationListener extends CordovaPlugin {
                 return true;
             case ACTION_REQUEST_PERMISSION:
                 requestPermissions();
-                return true;
-            case ACTION_OPEN_SETTINGS:
-                openSettings();
                 return true;
             case ACTION_IS_RUNNING:
                 isServiceRunning(callbackContext);

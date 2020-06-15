@@ -9,9 +9,6 @@ NotificationListener.prototype = {
     requestPermission: function(successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, SERVICE_NAME, 'requestPermission', []);
     },
-    openSettings: function(successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, SERVICE_NAME, 'openSettings', []);
-    },
     isRunning: function(successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, SERVICE_NAME, 'isRunning', []);
     },
