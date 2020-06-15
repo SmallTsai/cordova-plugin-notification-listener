@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-notification-listener" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>NotificationListener</name>
+    <js-module name="NotificationListener" src="www/NotificationListener.js">
+        <clobbers target="cordova.plugins.NotificationListener" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <service android:name="com.lou.cordova.plugin.AppNotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+                <intent-filter>
+                    <action android:name="android.service.notification.NotificationListenerService" />
+                </intent-filter>
+            </service>
+        </config-file>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="NotificationListener">
+                <param name="android-package" value="com.lou.cordova.plugin.NotificationListener" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+        </config-file>
+        <source-file src="src/android/NotificationListener.java" target-dir="src/com/lou/cordova/plugin" />
+        <source-file src="src/android/AppNotificationService.java" target-dir="src/com/lou/cordova/plugin" />
+    </platform>
+</plugin>

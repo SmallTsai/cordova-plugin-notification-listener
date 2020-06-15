@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-notification-listener",
+  "version": "0.0.1",
+  "description": "notification listener plugin",
+  "cordova": {
+    "id": "cordova-plugin-notification-listener",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "lou",
+  "license": "MIT"
+}
