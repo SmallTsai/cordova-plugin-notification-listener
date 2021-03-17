@@ -21,6 +21,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.service.notification.StatusBarNotification;
+import android.support.v4.content.LocalBroadcastManager;
 import android.view.View;
 import android.widget.TextView;
 
@@ -206,12 +207,12 @@ public class NotificationListener extends CordovaPlugin {
 
     private void registerReceiver() {
         Context context = cordova.getActivity().getApplicationContext();
-        context.registerReceiver(nReceiver, new IntentFilter(NOTIFY_CHANNEL));
+        LocalBroadcastManager.getInstance(context).registerReceiver(nReceiver, new IntentFilter(NOTIFY_CHANNEL));
     }
 
     private void unregisterReceiver() {
         Context context = cordova.getActivity().getApplicationContext();
-        context.unregisterReceiver(nReceiver);
+        LocalBroadcastManager.getInstance(context).unregisterReceiver(nReceiver);
     }
 
     private void parseNotification(Intent intent) {

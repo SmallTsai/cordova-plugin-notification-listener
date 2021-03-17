@@ -3,6 +3,7 @@ package com.lou.cordova.plugin;
 import android.content.Intent;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
+import android.support.v4.content.LocalBroadcastManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class AppNotificationService extends NotificationListenerService {
             return;
         Intent intent = new Intent(NotificationListener.NOTIFY_CHANNEL);
         intent.putExtra("sbn", sbn);
-        sendBroadcast(intent);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
     @Override

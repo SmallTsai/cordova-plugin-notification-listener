@@ -14,12 +14,20 @@
   },
   "bugs": {
     "url": "https://github.com/SmallTsai/cordova-plugin-notification-listener/issues"
-  },  
+  },
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
     "notification"
   ],
   "author": "lou",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

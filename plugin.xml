@@ -22,5 +22,7 @@
         </config-file>
         <source-file src="src/android/NotificationListener.java" target-dir="src/com/lou/cordova/plugin" />
         <source-file src="src/android/AppNotificationService.java" target-dir="src/com/lou/cordova/plugin" />
+	<framework src="com.android.support:appcompat-v7:21+" />
+
     </platform>
 </plugin>
